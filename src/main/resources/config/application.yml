@@ -17,11 +17,11 @@
 feign:
     hystrix:
         enabled: true
-#    client:
-#        config:
-#            default:
-#                connectTimeout: 5000
-#                readTimeout: 5000
+    client:
+        config:
+            default:
+                connectTimeout: 5000
+                readTimeout: 5000
 
 # See https://github.com/Netflix/Hystrix/wiki/Configuration
 hystrix:
@@ -140,6 +140,11 @@ jhipster:
         contact-email:
         license:
         license-url:
+
+googleSearch:
+    project: 006110062266875576165:ls2utmllp2y
+    key: AIzaSyAxlg_uLpHvw7aDAyQRMEWOlivfOFpOP6w
+    numOfResults: 20
 
 # ===================================================================
 # Application specific properties
