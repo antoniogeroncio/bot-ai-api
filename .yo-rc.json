@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "botApplication",
+    "packageName": "br.ufal.botai",
+    "packageFolder": "br/ufal/botai",
+    "serverPort": 8081,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.8.2",
+    "jwtSecretKey": "ZDYyMzY2NzE4MjEzYjRmYjQyZGFmYzYyNjI4OTVkNTYxZDhlOWRlYjQ1NzQwODY3YjM2YmZkNDI3ZDYzZGQzNDFiZGRiM2I5MGUzMzkyOTEyNjdiZDFmNjY1YjJiNDVjMGYyM2Q5MzJlYjRkNzE2MTk5YjIyMTM5NDRhMWQyZDU=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "antoniogeroncio",
+  "repository-name": "bot-ai-api"
+}
