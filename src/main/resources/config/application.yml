@@ -16,12 +16,12 @@
 
 feign:
     hystrix:
-        enabled: true
+        enabled: false
     client:
         config:
             default:
-                connectTimeout: 5000
-                readTimeout: 5000
+                connectTimeout: 160000000
+                readTimeout: 160000000
 
 # See https://github.com/Netflix/Hystrix/wiki/Configuration
 hystrix:
@@ -122,7 +122,7 @@ jhipster:
     # By default CORS is disabled. Uncomment to enable.
     #cors:
         #allowed-origins: "*"
-        #allowed-methods: "*"
+        #allowed-metthreadhods: "*"
         #allowed-headers: "*"
         #exposed-headers: "Authorization,Link,X-Total-Count"
         #allow-credentials: true
@@ -144,7 +144,11 @@ jhipster:
 googleSearch:
     project: 006110062266875576165:ls2utmllp2y
     key: AIzaSyAxlg_uLpHvw7aDAyQRMEWOlivfOFpOP6w
-    numOfResults: 20
+    numOfResults: 2
+
+qaClient:
+    url: http://localhost:5000
+
 
 # ===================================================================
 # Application specific properties

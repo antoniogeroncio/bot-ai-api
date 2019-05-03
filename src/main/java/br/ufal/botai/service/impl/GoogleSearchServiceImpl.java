@@ -35,9 +35,8 @@ public class GoogleSearchServiceImpl implements GoogleSearchService {
 
     @Override
     public List<Result> search(String searchString) throws IOException {
-        String namedEntityRecognition = nlpService.getNamedEntityRecognition(searchString);
         List<Result> results = new ArrayList<>();
-        Customsearch.Cse.List list = customsearch.cse().list(searchString).
+        Customsearch.Cse.List list = customsearch.cse().list(searchString);
 
         list.setKey(key);
         list.setCx(projetc);
