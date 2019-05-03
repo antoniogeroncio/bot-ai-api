@@ -6,5 +6,5 @@ import java.io.IOException;
 import java.util.List;
 
 public interface GoogleSearchService {
-    List<Result> search(String searchString) throws IOException;
+    String search(String searchString) throws IOException;
 }

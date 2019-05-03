@@ -21,7 +21,7 @@ public class GoogleSearchResource {
     }
 
     @GetMapping("/{searchString}")
-    public List<Result> search(@PathVariable("searchString") String searchString) throws IOException {
+    public String search(@PathVariable("searchString") String searchString) throws IOException {
         return googleSearchService.search(searchString);
     }
 }

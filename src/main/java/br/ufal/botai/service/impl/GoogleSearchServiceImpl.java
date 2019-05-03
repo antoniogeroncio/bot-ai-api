@@ -1,7 +1,6 @@
 package br.ufal.botai.service.impl;
 
 import br.ufal.botai.service.GoogleSearchService;
-import br.ufal.botai.service.NlpService;
 import com.google.api.services.customsearch.Customsearch;
 import com.google.api.services.customsearch.model.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,28 +24,30 @@ public class GoogleSearchServiceImpl implements GoogleSearchService {
     private Integer numOfResults;
 
     private Customsearch customsearch;
-    private NlpService nlpService;
 
     @Autowired
-    public GoogleSearchServiceImpl(Customsearch customsearch, NlpService nlpService) {
+    public GoogleSearchServiceImpl(Customsearch customsearch) {
         this.customsearch = customsearch;
-        this.nlpService = nlpService;
     }
 
     @Override
-    public List<Result> search(String searchString) throws IOException {
+    public String search(String searchString) throws IOException {
         List<Result> results = new ArrayList<>();
         Customsearch.Cse.List list = customsearch.cse().list(searchString);
-
         list.setKey(key);
         list.setCx(projetc);
-
+        StringBuilder stringBuilder = new StringBuilder();
         for(long i = 1 ; i < numOfResults ; i+=10){
             list.setStart(i);
-            results.addAll(list.execute().getItems());
+            List<Result> retorno = list.execute().getItems();
+            if(retorno != null){
+                for (Result r : retorno) {
+                    stringBuilder.append(r.getSnippet() + " ");
+                }
+            }
         }
 
-        return results;
+        return stringBuilder.toString();
     }
 
 }
